@@ -2,7 +2,7 @@ import java.util.List;
 
 class Equipe {
     private String nome;
-    private List<Pessoa> jogadores;  // Alterado para List<Pessoa>
+    private List<Pessoa> jogadores;  
 
     public Equipe(String nome, List<Pessoa> jogadores) {
         this.nome = nome;
