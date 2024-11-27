@@ -54,9 +54,9 @@ public class Menu {
                             break;
                         }
 
-                        System.out.print("Escolha o jogador 1 (índice): ");
+                        System.out.print("Escolha o jogador 1: ");
                         int jogador1Index = scanner.nextInt() - 1;
-                        System.out.print("Escolha o jogador 2 (índice): ");
+                        System.out.print("Escolha o jogador 2: ");
                         int jogador2Index = scanner.nextInt() - 1;
                         scanner.nextLine(); 
 
@@ -106,7 +106,8 @@ public class Menu {
 
             } while (opcao != 5);
         } else {
-            System.out.println("Usuário ou senha incorretos.");
+            System.out.println("Usuário ou senha incorretos");
+            System.out.println("O sistema será reinicializado.");
         }
 
         scanner.close();
