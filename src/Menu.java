@@ -29,7 +29,7 @@ public class Menu {
                 System.out.println("5. Sair");
                 System.out.print("Escolha uma opção: ");
                 opcao = scanner.nextInt();
-                scanner.nextLine();  // Limpar o buffer
+                scanner.nextLine(); 
 
                 switch (opcao) {
                     case 1:
@@ -39,11 +39,11 @@ public class Menu {
                         int idade = scanner.nextInt();
                         System.out.print("Pontos: ");
                         int pontos = scanner.nextInt();
-                        scanner.nextLine();  // Limpar o buffer
+                        scanner.nextLine(); 
                         jogadores.add(new Jogador(nome, idade, pontos));
                         break;
                     case 2:
-                        // Exibe jogadores cadastrados para formar a equipe
+                        
                         System.out.println("\n--- Jogadores Cadastrados ---");
                         for (int i = 0; i < jogadores.size(); i++) {
                             System.out.println((i + 1) + ". " + jogadores.get(i).getNome());
@@ -58,7 +58,7 @@ public class Menu {
                         int jogador1Index = scanner.nextInt() - 1;
                         System.out.print("Escolha o jogador 2 (índice): ");
                         int jogador2Index = scanner.nextInt() - 1;
-                        scanner.nextLine();  // Limpar o buffer
+                        scanner.nextLine(); 
 
                         if (jogador1Index != jogador2Index) {
                             List<Pessoa> equipeJogadores = new ArrayList<>();
@@ -80,13 +80,13 @@ public class Menu {
                             System.out.println(equipe);
                         }
 
-                        // Exibe uma mensagem aleatória de partida
+                        
                         if (equipes.size() >= 2) {
                             Random random = new Random();
                             int time1 = random.nextInt(equipes.size());
                             int time2 = random.nextInt(equipes.size());
 
-                            // Garantir que o time 1 e o time 2 não sejam o mesmo
+                            
                             while (time1 == time2) {
                                 time2 = random.nextInt(equipes.size());
                             }
@@ -112,10 +112,10 @@ public class Menu {
         scanner.close();
     }
 
-    // Método para gerar uma mensagem de resultado aleatório da partida
+    
     public static String gerarResultadoPartida(String time1, String time2) {
         Random random = new Random();
-        int vitoria = random.nextInt(2); // 0 para time1 vence, 1 para time2 vence
+        int vitoria = random.nextInt(2); 
         if (vitoria == 0) {
             return time1 + " venceu " + time2 + "!";
         } else {
